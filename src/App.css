@@ -1,0 +1,79 @@
+*{
+  margin: 0px;
+}
+/* 31C */
+:root{
+  --main-blue-color: #01cef1
+}
+.triviaheader{
+  width: 100%;
+  height: 100px;
+  background-color: #da2d7b;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.trivianame{
+  color: white;
+  font-size: 48px;
+  font-family: sans-serif;
+  font-weight: 700;
+}
+.addquestion{
+  height: 60px;
+  /* 31C */
+  background-color: var(--main-blue-color);
+  width: 200px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+/* 26H */
+.addquestion:hover{
+  background-color: #02b8d4
+}
+.line{
+  height: 3px;
+  width: 13px;
+  background-color: black;
+}
+.two{
+  transform: rotate(90deg);
+  /* 25C */
+  position: absolute;
+  left: 15px;
+}
+.centerbuttons{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 50%;
+  margin-left: 25%;
+}
+/* 22C-3 */
+.centerbuttons > div{
+  height: 48px;
+  width: 20%;
+  /* 31C */
+  background-color: var(--main-blue-color);
+  /* 24D */
+  border-left: 1px solid white;
+  border-right: 1px solid white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+.questions{
+  position: absolute;
+  top: 148px;
+  height:100%;
+  width: 50%;
+  background-color: #ededed;
+  margin-left: 25%;
+}
