@@ -1,9 +1,32 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+import axios from 'axios'
 
 class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      questions: []
+    }
+  }
+  // 44C 44D 44E
+  componentDidMount() {
+    axios.get('https://practiceapi.devmountain.com/api/trivia/questions/').then(res => {
+      console.log(res)
+      this.setState({
+        questions: res.data
+      })
+    })
+  }
   render() {
+    
+    let questions = this.state.questions.map((e, i) => {
+      return (
+        <div key={i} className='singlequestion'>
+          <div className="questionname">{e.question}</div>
+        </div>
+      )
+    })
     return (
       <div>
         <nav className='triviaheader'>
@@ -22,7 +45,7 @@ class App extends Component {
           <div className='search'>Search By Animal</div>
         </div>
         <div className='questions'>
-          
+          {questions}
         </div>
       </div>
     );
